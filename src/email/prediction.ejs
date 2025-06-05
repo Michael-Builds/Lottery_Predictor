@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lottery Prediction</title>
+    <style type="text/css">
+      body {
+        font-family: "Nunito Sans", sans-serif;
+        font-size: 14px;
+        background-color: #f4f4f4;
+        color: #222222;
+        text-align: center;
+      }
+      .email-wrapper {
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 8px;
+      }
+      .email-header {
+        background-color: #0070f3;
+        padding: 16px 20px;
+        color: #ffffff;
+        border-radius: 8px 8px 0 0;
+      }
+      .code {
+        font-size: 20px;
+        font-weight: bold;
+        background-color: #f3f3f3;
+        padding: 10px;
+        border-radius: 4px;
+        display: inline-block;
+      }
+      .footer {
+        margin-top: 20px;
+        font-size: 12px;
+        color: #555;
+      }
+      .title {
+        font-size: 16px;
+        text-align: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="email-wrapper">
+      <div class="email-header">
+        <h1 class="title">Lottery Prediction Results</h1>
+      </div>
+      <p>Dear Michael,</p>
+      <p>Here are the latest lottery predictions:</p>
+      <p><strong>Draw:</strong> <%= draw %></p>
+      <p><strong>Date:</strong> <%= date %></p>
+      <p><strong>Predicted Numbers:</strong></p>
+      <div class="code"><%= predictedNumbers.join(', ') %></div>
+      <p><strong>Prediction Accuracy:</strong> <%= accuracy.toFixed(2) %>%</p>
+      <div class="footer">
+        <p>If you have any questions, contact us at michaelkpanti@gmail.com</p>
+      </div>
+    </div>
+  </body>
+</html>
